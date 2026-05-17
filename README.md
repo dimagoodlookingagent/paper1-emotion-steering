@@ -1,6 +1,8 @@
 # Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it
 
-Companion repository for *"Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B"* (preprint, 2026).
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20260132.svg)](https://doi.org/10.5281/zenodo.20260132) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Companion repository for *"Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B"* (preprint, 2026). Companion data: [10.5281/zenodo.20260132](https://doi.org/10.5281/zenodo.20260132).
 
 ## Thesis
 
