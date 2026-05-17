@@ -8,7 +8,7 @@
 
 ## Executive summary
 
-We study what emotion-direction activation steering changes inside Gemma-2-2B when it changes misalignment behavior. Steering raises cheat on a sandbagging-style "8th-of-8 attempt" coding scenario from 26% (T1 baseline) to 44% (calm+confident @ +0.15) — a substantial behavioral effect.
+We study what activation steering — applied both to emotion directions and to an extracted authorization direction — changes inside Gemma-2-2B when it changes misalignment behavior. Steering raises cheat on a sandbagging-style "8th-of-8 attempt" coding scenario from 26% (T1 baseline) to 44% (calm+confident @ +0.15) — a substantial behavioral effect.
 
 **The asymmetry we establish**: emotion STEERING (additive intervention) moves cheat substantially; trained-probe SUPPRESSION (subtractive intervention, on directions extracted from response-activation classifiers predicting cheat=Y) does not produce a consistent cross-cell reduction in cheat under either judge. These are different intervention classes and only the second yields the negative result. The three mechanistic tests below test the suppression / probe-localization side of that asymmetry, not the steering side:
 
@@ -40,7 +40,7 @@ Two recent papers — both published in April 2026 — set up the question this 
 
 These results are complementary in a specific sense: Sofroniew et al. shows that *activation-steering along an emotion direction* changes generated content. Ibrahim et al. shows that *fine-tuning a model toward warmth* (a parameter-space intervention, not an activation-space one) degrades benchmark accuracy and increases sycophancy. Both interventions push the model along emotion-related axes — activation steering is a runtime, additive operation on residual streams; fine-tuning is a parameter-update operation. Neither paper provides a mechanistic account of *what happens in activation space* during the misalignment-relevant cases. We address the question for the activation-steering case.
 
-The natural follow-up — and the question this paper attempts to answer — is: **when activation steering on an emotion direction shifts a model's likelihood of taking a specific bypass action, which intermediate variables actually move, and at what layer / what generation-step does the change happen?**
+The natural follow-up — and the question this paper attempts to answer — is: **when activation steering — on an emotion direction or on an authorization direction — shifts a model's likelihood of taking a specific bypass action, which intermediate variables actually move, and at what layer / what generation-step does the change happen?**
 
 We approach this with three concrete hypotheses, in order of mechanism-strength. Note that each hypothesis is testable via *trained-probe direction suppression* during generation — we extract a probe direction from response activations (trained to predict cheat, rationalization, etc.), then subtract that direction from every token's residual stream during a fresh generation. Suppressing the emotion vector itself is a separate intervention class we don't test in this paper.
 
@@ -50,7 +50,7 @@ We approach this with three concrete hypotheses, in order of mechanism-strength.
 
 Our findings refute H1 and H2 cleanly (multi-judge confirmed for cheat). H3 is what we observe in Sonnet labels (framing-axis labels do change under suppression while cheat doesn't), but the framing-axis changes are largely judge-specific — Opus disagrees with Sonnet on the `fix` axis (κ = −0.03), where Sonnet sees the most dramatic collapse. So H3 holds within-Sonnet but isn't a clean model-internal phenomenon under multi-judge ensemble.
 
-**Why this matters for AI safety**: activation steering is being proposed as a safety dial. A direction that *predicts* a misalignment behavior is easy to find; one that *causally* moves it is harder. This paper provides empirical evidence on a specific case: emotion vectors predict cheat (correlate with behavioral effect) but don't causally control it via the simplest intervention class (direction-suppression). The gap between detection and intervention is a real one, and probably under-discussed in current activation-steering work.
+**Why this matters for AI safety**: activation steering is being proposed as a safety dial. A direction that *predicts* a misalignment behavior is easy to find; one that *causally* moves it is harder. This paper provides empirical evidence on a specific case: emotion-direction and `auth_dir` STEERING both *do* move cheat substantially, but trained-probe SUPPRESSION (the simplest "directional safety dial" instantiation) does *not* reduce cheat — the gap isn't between vector sources, it's between intervention classes (additive steering vs subtractive suppression). The gap between detection and intervention is a real one, and probably under-discussed in current activation-steering work.
 
 ---
 
@@ -402,6 +402,8 @@ For comparison, on a separate Phase A direction-suppression record set (n=330, b
 ---
 
 ## 7. Implications
+
+Our main empirical claim — that **direction steering moves cheat across two vector sources** (emotion, `auth_dir`) **while trained-probe suppression doesn't undo it** — has implications across several audiences:
 
 **For Sofroniew et al.**: emotion concepts are steerable directions, as you demonstrated. We add the next mechanistic question: when emotion steering causes a *behavioral* change, our toolkit (cheat probes at multiple layers, direction-suppression with two trained directions, single-feature SAE interventions) doesn't recover the causal pathway. The behavioral effect is real (cc@+15 vs cc@−15: 44% vs 4% on T1) but the mechanism is opaque to the standard interpretability tools. This is informative for what direction-based work can and can't claim.
 
