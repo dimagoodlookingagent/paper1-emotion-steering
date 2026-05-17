@@ -89,7 +89,7 @@ paper1/
 - ✓ All scripts populated (`scripts/`, 18 files)
 - ✓ All prompts extracted (`prompts/`, 5 files)
 - ✓ All vectors copied (`vectors/`, 10 .pt files)
-- ✓ Placeholders substituted (author name, repo URL, contact info; Zenodo DOI pending reservation)
+- ✓ All placeholders substituted (author name + ORCID, repo URL, contact info, Zenodo DOI 10.5281/zenodo.20260132)
 - ⏳ External read-through
 
 ## Hyperparameters
