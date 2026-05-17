@@ -1,6 +1,6 @@
-# Emotion steering moves cheat; trained-probe suppression doesn't undo it
+# Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it
 
-Companion repository for *"Emotion steering moves cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B"* (preprint, 2026).
+Companion repository for *"Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B"* (preprint, 2026).
 
 ## Thesis
 
@@ -216,9 +216,9 @@ From `paper1/` as the working directory:
 Once posted, this preprint is intended to be cited as:
 
 ```
-Dmytro Tarasenko (ORCID: 0009-0006-7624-4943). "Emotion steering moves cheat;
-trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B."
-Preprint, 2026. Data: https://doi.org/10.5281/zenodo.20260132
+Dmytro Tarasenko (ORCID: 0009-0006-7624-4943). "Emotion and authorization steering
+both move cheat; trained-probe suppression doesn't undo it: a mechanistic study
+in Gemma-2-2B." Preprint, 2026. Data: https://doi.org/10.5281/zenodo.20260132
 ```
 
 ## Related work

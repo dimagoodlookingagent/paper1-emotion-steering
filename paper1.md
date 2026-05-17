@@ -1,4 +1,4 @@
-# Emotion steering moves cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B
+# Emotion and authorization steering both move cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B
 
 **Dmytro Tarasenko** · ORCID [0009-0006-7624-4943](https://orcid.org/0009-0006-7624-4943) · [contact.dimagoodlooking@gmail.com](mailto:contact.dimagoodlooking@gmail.com)
 
