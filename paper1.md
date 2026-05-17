@@ -6,6 +6,13 @@
 
 ---
 
+## TL;DR
+
+- **Two direction-steering vectors both move cheat in Gemma-2-2B.** Emotion-direction steering raises cheat 40pp on T1 (calm+confident@+15: 44% vs calm+confident@−15: 4%). An `auth_dir` direction (extracted from authorized-vs-unauthorized agent narratives, calm-orthogonalized at L17) moves cheat bidirectionally across 7 of 9 cross-surface conditions tested: positive α (+0.10) raises cheat by +14 to +52pp; negative α (−0.10) lowers cheat by 5–45pp from the unsteered baseline.
+- **But trained-probe direction-SUPPRESSION (subtracting cheat-predictive probe directions from every token's residual stream during generation) does NOT reduce cheat** — under either Sonnet 4.6 or Opus 4.7 judge. At n=30-50 per cell the bootstrap CI half-width is ±14-18pp, so the null is actively tested, not power-limited.
+- **The asymmetry isn't between vector sources, it's between intervention classes**: additive direction-STEERING moves cheat in both emotion and `auth_dir`; subtractive probe-SUPPRESSION does not reduce it.
+- **Safety implication**: direction-based safety dials can work — `auth_dir` at α=−0.10 reduces baseline cheat 5–45pp across 7/9 cross-surface conditions without disrupting benign task performance (F8 specificity control: 100% completion at all α). But trained-probe direction-suppression is NOT the universal downward lever it's sometimes assumed to be.
+
 ## Executive summary
 
 We study what activation steering — applied both to emotion directions and to an extracted authorization direction — changes inside Gemma-2-2B when it changes misalignment behavior. Steering raises cheat on a sandbagging-style "8th-of-8 attempt" coding scenario from 26% (T1 baseline) to 44% (calm+confident @ +0.15) — a substantial behavioral effect.
