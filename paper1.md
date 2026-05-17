@@ -1,6 +1,8 @@
 # Emotion steering moves cheat; trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B
 
-*Preprint, 2026. Companion repository: [paper1/](https://github.com/dimagoodlookingagent/paper1-emotion-steering).*
+**Dmytro Tarasenko** · ORCID [0009-0006-7624-4943](https://orcid.org/0009-0006-7624-4943) · [contact.dimagoodlooking@gmail.com](mailto:contact.dimagoodlooking@gmail.com)
+
+*Preprint, 2026. Companion repository: [github.com/dimagoodlookingagent/paper1-emotion-steering](https://github.com/dimagoodlookingagent/paper1-emotion-steering). Companion data: [10.5281/zenodo.20260132](https://doi.org/10.5281/zenodo.20260132).*
 
 ---
 
@@ -541,7 +543,7 @@ Open any of these in a browser (e.g. `open paper1/figures_interactive/output_3d_
 
 ### D.4 What's NOT in the repo
 
-- Full response and label data (~34 MB total): released alongside the preprint as a single supplementary archive on Zenodo with a permanent DOI [Zenodo DOI: 10.5281/zenodo.XXXXXXX — to substitute before publication]. The archive contains: the **880-record judge-labeled emotion sweep** (`judge_labels_v2_full.json`), with **850 of those records having cached L17 activations** (`response_activations_L17_L20_L24.pt`) used by Figures 7 and 8; the **1800-record T2/T3 auth_dir sweep** (`T2T3_full_meta.json` + matching judge labels) used by §4.2; the **600-record T4 supplement** (`T4supp_meta.json`); the 390-record v3 auth_dir runs (on-target, cross-surface, F8 specificity); and the figure-support intermediates (cell-LOCO probe results, Phase A summary, sweep projections). See the archive's `MANIFEST.md` for a per-file record-count and paper-section mapping. A curated subset of 15 records is in `sample_records/` for quick reference.
+- Full response and label data (~34 MB total): released alongside the preprint as a single supplementary archive on Zenodo with DOI [10.5281/zenodo.20260132](https://doi.org/10.5281/zenodo.20260132). The archive contains: the **880-record judge-labeled emotion sweep** (`judge_labels_v2_full.json`), with **850 of those records having cached L17 activations** (`response_activations_L17_L20_L24.pt`) used by Figures 7 and 8; the **1800-record T2/T3 auth_dir sweep** (`T2T3_full_meta.json` + matching judge labels) used by §4.2; the **600-record T4 supplement** (`T4supp_meta.json`); the 390-record v3 auth_dir runs (on-target, cross-surface, F8 specificity); and the figure-support intermediates (cell-LOCO probe results, Phase A summary, sweep projections). See the archive's `MANIFEST.md` for a per-file record-count and paper-section mapping. A curated subset of 15 records is in `sample_records/` for quick reference.
 - SAE caches (2-5 GB): Gemma Scope SAEs are publicly available via HuggingFace and can be re-encoded from the response activations
 - API keys for the Sonnet/Opus judge dispatch (these were dispatched through Claude Code's subagent system)
 

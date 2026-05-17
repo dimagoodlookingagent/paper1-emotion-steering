@@ -46,7 +46,7 @@ Per surface, we include 5 records:
 - 1 `calm@-15` cheat-Y (negative valence / "desperate" steering)
 - 1 `calm+confident@+15` cheat-Y (combined positive-valence steering — the strongest single behavioral effect in the v1 sweep)
 
-These are not random samples — they are intentionally curated as calibration anchors for a reader running their own judge. For replication studies, use the full data archive on Zenodo at DOI 10.5281/zenodo.XXXXXXX [substitute final DOI before pushing], which contains the 880-record judge-labeled emotion sweep (850 with cached L17 activations), 1800-record T2/T3 cross-surface auth_dir sweep, 600-record T4 supplement, and 390-record v3 auth_dir on-target/F8 runs. See the archive's `MANIFEST.md` for the full per-file mapping.
+These are not random samples — they are intentionally curated as calibration anchors for a reader running their own judge. For replication studies, use the full data archive on Zenodo at DOI [10.5281/zenodo.20260132](https://doi.org/10.5281/zenodo.20260132), which contains the 880-record judge-labeled emotion sweep (850 with cached L17 activations), 1800-record T2/T3 cross-surface auth_dir sweep, 600-record T4 supplement, and 390-record v3 auth_dir on-target/F8 runs. See the archive's `MANIFEST.md` for the full per-file mapping.
 
 **Note on T4**: only 4 T4 records exist in the released v2 sweep, so we do not include a `T4_examples.jsonl`. T4 was a secondary surface tested for `auth_dir` generalization (see paper §4); its full records are available in the project's full dataset.
 

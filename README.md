@@ -200,7 +200,7 @@ From `paper1/` as the working directory:
 
 ### What's NOT in the repo and why
 
-- **Full response and judge-label data archive** (~34 MB) — hosted on Zenodo at DOI 10.5281/zenodo.XXXXXXX [substitute final DOI before pushing]. Contains: 880-record emotion sweep (850 with cached L17 activations); 1800-record T2/T3 auth_dir sweep; 600-record T4 supplement; 390-record v3 auth_dir on-target/F8 runs; figure-support intermediates. See the archive's `MANIFEST.md` for the per-file mapping.
+- **Full response and judge-label data archive** (~34 MB) — hosted on Zenodo at DOI [10.5281/zenodo.20260132](https://doi.org/10.5281/zenodo.20260132). Contains: 880-record emotion sweep (850 with cached L17 activations); 1800-record T2/T3 auth_dir sweep; 600-record T4 supplement; 390-record v3 auth_dir on-target/F8 runs; figure-support intermediates. See the archive's `MANIFEST.md` for the per-file mapping.
   with a permanent DOI before public release. Sample subset is in
   `sample_records/`.
 - **SAE caches** (2-5 GB) — the Gemma Scope SAEs are publicly available
@@ -216,8 +216,9 @@ From `paper1/` as the working directory:
 Once posted, this preprint is intended to be cited as:
 
 ```
-Dmytro Tarasenko. "Emotion steering moves cheat; trained-probe suppression doesn't undo it:
-a mechanistic study in Gemma-2-2B." Preprint, 2026.
+Dmytro Tarasenko (ORCID: 0009-0006-7624-4943). "Emotion steering moves cheat;
+trained-probe suppression doesn't undo it: a mechanistic study in Gemma-2-2B."
+Preprint, 2026. Data: https://doi.org/10.5281/zenodo.20260132
 ```
 
 ## Related work
