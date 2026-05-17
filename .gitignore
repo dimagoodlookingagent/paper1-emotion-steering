@@ -1,0 +1,39 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.venv/
+.env
+*.egg-info/
+.ipynb_checkpoints/
+
+# Large outputs not in repo
+out/
+generations/
+*.log
+
+# Activation caches (regeneratable)
+sae_features_*.pt
+*_activations.pt
+*.npy
+
+# Editor swap files
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# OS junk
+Thumbs.db
+
+# Local-only experimental
+scratch/
+notes/
+
+# Internal design / planning docs — not part of the preprint
+CONTENTS.md
+paper1_structure.md
+
+
+# Local-only Zenodo staging directory — uploaded separately, not part of paper repo
+_zenodo_staging/
